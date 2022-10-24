@@ -29,15 +29,20 @@
     <div class="col-md-4  ">
         <label for="inputname">Title
 </label>
-<label class="requiredField" style="color:red;"> *</label>
+<label class="Title" style="color:red;"> *</label>
 
-        <input type="text" class="form-control" id="InstiName"placeholder=" Institute Name" required/>
+<div class="col-md-4">
+<label for="Title">Title</label>
+<select class="form-select" aria-label="Title" id="Title">
+<option value="" selected >Mr.</option>
+<option value="Maharashtra">Mrs.</option>
+</select>
     </div>
     <div class="col-md-4  1">
-        <label for="Address" >First Name</label>
-        <label class="requiredField" style="color:red;"> *</label>
+        <label for="FName" >First Name</label>
+        <label class="FName" style="color:red;"> *</label>
 
-        <input type="text" class="form-control" placeholder="Address" id="Address" required/>
+        <input type="text" name="FName" class="form-control" placeholder="First Name" id="FName" required/>
     </div>
     <div class="col-md-4">
       
@@ -45,7 +50,7 @@
 </label>
 <label style="color:red;"> *</label>
 
-        <input type="text" class="form-control" placeholder="Name"  id="" name="" id="Place" name="Place">
+        <input type="text" class="form-control" placeholder="Father’s Name" id="FathName" name="FathName">
     </div>
     <div class="col-md-4">
         <label for="District">Surname</label>
@@ -143,7 +148,8 @@
 
 </form>
 
-</div>    
+</div>   
+
 
 
 

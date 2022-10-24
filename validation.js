@@ -17,6 +17,22 @@ export function ValidString(a){
     }
 
 }
+export function ValidStd(a){
+    
+    if(a.length<=5)
+    {
+     return true;
+    }
+    else{
+        SendAlert("Please Enter Valid Std.","alert alert-danger")
+        setTimeout(()=>{
+            SendAlert("","")
+        },3000)
+        return false; 
+        
+    }
+
+}
 export function ValidPin(a){
             
    
