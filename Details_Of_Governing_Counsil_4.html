@@ -27,108 +27,98 @@
 <form name="myform" class="form-group" action="#" id="InstiTuteDetForm">
     <div class="row bg-light text-dark" id="BasicDetails" >
     <div class="col-md-4  ">
-        <label for="inputname">Title
-</label>
-<label class="Title" style="color:red;"> *</label>
+        <label for="inputname">Title</label>
+<label class="requiredField" style="color:red;"> *</label>
 
-<div class="col-md-4">
-<label for="Title">Title</label>
 <select class="form-select" aria-label="Title" id="Title">
-<option value="" selected >Mr.</option>
+<option value="Mr" selected >Mr.</option>
 <option value="Maharashtra">Mrs.</option>
 </select>
     </div>
-    <div class="col-md-4  1">
-        <label for="FName" >First Name</label>
-        <label class="FName" style="color:red;"> *</label>
-
-        <input type="text" name="FName" class="form-control" placeholder="First Name" id="FName" required/>
-    </div>
     <div class="col-md-4">
-      
-        <label for="Place">Father’s Name
+      <label for="FName" >First Name</label>
+      <label class="requiredField" style="color:red;"> *</label>
+
+      <input type="text" name="FName" class="form-control" placeholder="First Name" id="FName" required/>
+  </div>
+  <div class="col-md-4">
+    
+      <label for="Place">Father’s Name
 </label>
 <label style="color:red;"> *</label>
 
-        <input type="text" class="form-control" placeholder="Father’s Name" id="FathName" name="FathName">
-    </div>
-    <div class="col-md-4">
-        <label for="District">Surname</label>
-        <input type="text" class="form-control" placeholder="District" name="District" id="District">
-    </div>
-    <div class="col-md-4">
-        <label for="State">Designation 
-            Details :
-            </label>
-        <select class="form-select" aria-label="State">
-  <option selected>Select State</option>
-  <option value="Maharashtra">Chairman.</option>
-  <option value="Gujrat">Gujrat</option>
-  <option value="Karnataka"> Karnataka</option>
-  <option value="Goa"> Goa</option>
+      <input type="text" class="form-control" placeholder="Father’s Name" id="FathName" name="FathName">
+  </div>
+  <div class="col-md-4">
+      <label for="Surname">Surname</label>
+      <input type="text" class="form-control" placeholder="Surname" name="Surname" id="Surname">
+  </div>
+  <div class="col-md-4">
+      <label for="Designation">Designation Details :
+          </label>
+      <select class="form-select" aria-label="Designation">
+<option value=""selected>Select Designation</option>
+<option value="Chairman">Chairman.</option>  
+<option value="Secretary">Secretary</option>
+<option value="Member"> Karnataka</option>
+<option value="Ex-office Member"> Ex-office Member</option>
 
 </select>
-    </div>
-    <div class="col-md-4">
-        <label for="PinCode">Academic Background</label>
-        <input type="number" class="form-control" placeholder="Pin code" name="PinCode" id="PinCode">
-    </div>
-    <div class="col-md-4 ">
-        <label for="STD">Address Line 1</label>
-        <input type="text" class="form-control" placeholder="STD Code"  id="StdCode" name="STD" >
-    </div>
-    <div class="col-md-4 ">
-        <label for="STD">Address Line 2</label>
-        <input type="text" class="form-control" placeholder="STD Code"  id="StdCode" name="STD" >
-    </div>
-    <div class="col-md-4 ">
-        <label for="STD">Village/ City</label>
-        <input type="Number" class="form-control" placeholder="STD Code"  id="StdCode" name="STD" >
-    </div>
-    <div class="col-md-4">
-        <label for="LandLine">State</label>
-        <input type="text" class="form-control" placeholder="Land Line No" id="LandLine" name="LandLine">
-    </div>
-    <div class="col-md-4" >
-        <label for="inputname"> PIN</label>
-        <input type="text" class="form-control" placeholder="Mobile No." id="MobNo">
-    </div>
-    <div class="col-xl-4">
-    <label for="Pan" class=" mx-3">Contact No
-</label>
-<div class="form-check form-check-inline my-4 mx-3  mx-2">
-  <input class="form-check-input" type="radio" name="PanYes" id="PanY" value="Yes">
-  <label class="form-check-label" for="PanYes">Yes</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="PanYes" id="PanN" value="No">
-  <label class="form-check-label" for="Pan">No</label>
-</div>  
-</div>
+  </div>
+  <div class="col-md-4">
+      <label for="AcademicBack">Academic Background</label>
+      <input type="text" class="form-control" placeholder="Academic Background" name="AcademicBack" id="AcademicBack">
+  </div>
+  <div class="col-md-4 ">
+      <label for="Address">Address Line 1</label>
+      <input type="text" class="form-control" placeholder="Address Lin 1"  id="Address1" name="Address Line 1" >
+  </div>
+  <div class="col-md-4 ">
+      <label for="Address2">Address Line 2</label>
+      <input type="text" class="form-control" placeholder="Address Line 2"  id="StdCode" name="Address" >
+  </div>
+  <div class="col-md-4 ">
+      <label for="Town">Village/ City</label>
+      <input type="Number" class="form-control" placeholder="Village/City Name"  id="Town" name="Town" >
+  </div>
+  <div class="col-md-4">
+      <label for="State">State</label>
+      <select class="form-select" aria-label="State">
+        <option value=""selected>Select Designation</option>
+        <option value="Maharashtra">Maharashtra.</option>  
+        <option value="Goa">Goa</option>
+        <option value="Karnataka"> Karnataka</option>
+       
+        </select>  </div>
+  <div class="col-md-4" >
+      <label for="PinCode"> PIN</label>
+      <input type="text" class="form-control" placeholder="Pin Code." id="PinCode" name="PinCode">
+  </div>
+  
 <div class="col-md-4 "id="PanNumber" >
-        <label for="PanNumber">Land Line Number</label>
-        <input type="date" class="form-control" placeholder="Pan No"  id="PanNo" name="PanNumber" >
-    </div>
-    
-    <div class="col-md-4  ">
-        <label for="BankAccNo">Mobile Number</label>
-        <input type="text" class="form-control " placeholder="Bank Account Number" id="BankAccNo" name="BankAccNo">
-    </div>
-    <div class="col-md-4">
-        <label for="AddressBank">Email Id
-        </label>
-        <input type="text" class="form-control" placeholder="Name & Addrees of Bank" name="AddressBank" id="AddressBank">
-    </div>
-    
-    </div>
+      <label for="LandLine">Land Line Number</label>
+      <input type="number" class="form-control" placeholder="Land Line Number"  id="LandLine" name="LandLine" >
+  </div>
+  
+  <div class="col-md-4  ">
+      <label for="MobNo">Mobile Number</label>
+      <input type="number" class="form-control " placeholder="Mobile Number" id="MobNo" name="MobNo">
+  </div>
+  <div class="col-md-4">
+      <label for="email">Email Id
+      </label>
+      <input type="email" class="form-control" placeholder="Email Id" name="email" id="email">
+  </div>
+  
+   
     <div class="d-flex justify-content-end">
-   <button type="button" class="btn btn-info" id="NxtBtn" >Next</button>
+   <button type="button" class="btn btn-info my-2" id="NxtBtn" >Next</button>
+    </div>
     </div>
     <div class="row bg-light text-dark" id="FileUpload" hidden>
     
-    <div class="mb-3 text-center">
-  <label for="formFile" class="form-label">Upload: Registration 
-    certificate</label>
+    <div class="mb-3 text-center" >
+  <label for="formFile" class="form-label">Upload/ Attach: the copies of minutes of the latest 2 GC meetings</label>
   <input class="form-control my-2 text-dark " style="width:37%;margin-left:33%;" type="file" id="formFile" accept=".pdf"  >
 
 
@@ -163,25 +153,29 @@
 <script type="module">
   import * as func from"./validation.js"
   $(document).ready(function(){
-   
+    var bool_trig=false;
+
     $("#NxtBtn").click(function(){
      
     
-    var InstiName=document.getElementById("InstiName").value;
+    var FName=document.getElementById("FName").value;
+    var FathName=document.getElementById("FathName").value;
+    var Surname=document.getElementById("Surname").value;
+    var AcademicBack=document.getElementById("AcademicBack").value;
     var PinCode=document.getElementById("PinCode").value;
     var MobNo=document.getElementById("MobNo").value;
     var LandLine=document.getElementById("LandLine").value;
-    var PanNo=document.getElementById("PanNo").value
-   
 
-// if(func.ValidString(InstiName)&&func.ValidPin(PinCode)&&func.ValidMobNo(MobNo)&&func.ValidPanNo(PanNo)){
+    
+
+ if(func.ValidString(FName)&&func.ValidString(FathName)&&func.ValidString(Surname)&&func.ValidString(AcademicBack)&&func.ValidPin(PinCode)&&func.ValidMobNo(MobNo)&&func.ValidLandLine(LandLine)){
  // if(func.ValidString(InstiName)&&func.ValidPin(PinCode)&&func.ValidMobNo(MobNo)&&func.ValidPanNo(PanNo)&&func.ValidLandLine(LandLine)){
   document.getElementById("BasicDetails").hidden=true;
       document.getElementById("FileUpload").hidden=false;
       document.getElementById("NxtBtn").hidden=true;
       document.getElementById("PrevBtn").hidden=false;
       document.getElementById("SubBtn").hidden=false;
- //}
+ }
 
   });
 

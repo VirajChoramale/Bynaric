@@ -1,4 +1,3 @@
- alert("loaded")
 
 
 export function ValidString(a){
@@ -24,7 +23,7 @@ export function ValidStd(a){
      return true;
     }
     else{
-        SendAlert("Please Enter Valid Std.","alert alert-danger")
+        SendAlert("Please Enter Valid Std code.","alert alert-danger")
         setTimeout(()=>{
             SendAlert("","")
         },3000)

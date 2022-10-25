@@ -84,8 +84,8 @@
         <input type="Number" class="form-control" placeholder="STD Code"  id="InstiStd" name="InstiStd" >
     </div>
     <div class="col-md-4 ">
-        <label for="STD">Fax</label>
-        <input type="Number" class="form-control" placeholder="STD Code"  id="StdCode" name="STD" >
+        <label for="Fax">Fax</label>
+        <input type="Number" class="form-control" placeholder="Fax"  id="Fax" name="Fax" >
     </div>
     <div class="col-md-4">
         <label for="InstiLandLine">Land Line Number</label>
@@ -263,10 +263,9 @@
    var typeOfOragnisation=document.getElementById("ChairPin").value;
       
    
-   
 
 // if(func.ValidString(InstiName)&&func.ValidPin(PinCode)&&func.ValidMobNo(MobNo)&&func.ValidPanNo(PanNo)){
-  if(func.ValidString(NameOfTrust)&&func.ValidPin(PinCode)&&func.ValidMobNo(MobNo)&&func.ValidLandLine(InstiLandLine)&&func.ValidLandLine(ChairLandLine)&&func.ValidString(NameChairman)&&func.ValidPin(ChairPin)
+  if(func.ValidString(NameOfTrust)&&func.ValidPin(PinCode)&&func.ValidMobNo(MobNo)&&func.ValidString(NameChairman)&&func.ValidPin(ChairPin)
   &&func.ValidStd(ChairStd)&&func.ValidStd(InstiStd)
   ){
   document.getElementById("BasicDetails").hidden=true;
