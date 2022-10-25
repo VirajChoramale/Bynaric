@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
-    <title>Principle</title>
+    <title>Principle Details</title>
 </head>
 <body>
     
@@ -27,122 +27,224 @@
 <form name="myform" class="form-group" action="#" id="InstiTuteDetForm">
     <div class="row bg-light text-dark" id="BasicDetails" >
     <div class="col-md-4  ">
-        <label for="inputname">First Name
+        <label for="Fnamae">First Name
 
 </label>
 <label class="requiredField" style="color:red;"> *</label>
 
-        <input type="text" class="form-control" id="InstiName"placeholder=" Institute Name" required/>
+        <input type="text" class="form-control" id="Fname"placeholder=" First Name" required/>
     </div>
     <div class="col-md-4  1">
-        <label for="Address" >Father’s Name</label>
+        <label for="FatherName" >Father’s Name</label>
         <label class="requiredField" style="color:red;"> *</label>
 
-        <input type="text" class="form-control" placeholder="Address" id="Address" required/>
+        <input type="text" class="form-control" placeholder="Father’s Name id="FatherName" name="FatherName" required/>
     </div>
     <div class="col-md-4">
       
-        <label for="Place">Surname
+        <label for="Surname">Surname
 </label>
 <label style="color:red;"> *</label>
 
-        <input type="text" class="form-control" placeholder="Name"  id="" name="" id="Place" name="Place">
+        <input type="text" class="form-control" placeholder="Surname"  id="Surname" name="Surname" >
     </div>
     <div class="col-md-4">
-        <label for="District">Date of birth</label>
-        <input type="date" class="form-control" placeholder="District" name="District" id="District">
+        <label for="Dob">Date of birth</label>
+        <input type="date" class="form-control" placeholder="Date of Birth" name="Dob" id="Dob">
+    </div>
+    <div class="col-md-4 my-1">
+        <label for="DocDegree">Doctorate degree </label><br>
+        <div class="form-check form-check-inline  mx-1  ">
+            <input class="form-check-input" type="radio" name="DocDegree" id="DocDegree" value="Yes">
+            <label class="form-check-label" for="WomenInsti">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="DocDegree" id="DocDegree" value="No">
+            <label class="form-check-label" for="WomenInsti">No</label>
+          </div>  
     </div>
     <div class="col-md-4">
-        <label for="State">Doctorate degree (select)</label>
-        <select class="form-select" aria-label="State">
-  <option selected>Select State</option>
-  <option value="Maharashtra">Maharashtra.</option>
-  <option value="Gujrat">Gujrat</option>
-  <option value="Karnataka"> Karnataka</option>
-  <option value="Goa"> Goa</option>
-
+        <label for="Stream">Stream(Doctorate)
+</label>
+<select class="form-select" aria-label="Stream" name="Stream" id="Stream">
+  <option value="" selected>Select  Stream</option>
+  <option value="Science">Science.</option>
+  <option value="Branch">Branch</option>
 </select>
     </div>
     <div class="col-md-4">
-        <label for="PinCode">Details : Stream, Branch, University, Specialization</label>
-        <input type="text" class="form-control" placeholder="Pin code" name="PinCode" id="PinCode">
-    </div>
-    <div class="col-md-4 ">
-        <label for="STD">Master’s degree radio</label>
-        <input type="Number" class="form-control" placeholder="STD Code"  id="StdCode" name="STD" >
+        <label for="Branch">Branch(Doctorate)
+</label>
+<select class="form-select" aria-label="Branch" name="Branch" id="Branch">
+  <option value=""selected>Select Branch</option>
+  <option value="branch1">branch1.</option>
+  <option value="branch2">branch2</option>
+</select>
+    </div> <div class="col-md-4">
+        <label for="University">University(Doctorate)
+</label>
+<select class="form-select" aria-label="University" name="University" id="University">
+  <option selected>Select University</option>
+  <option value="Uni1">Uni1.</option>
+  <option value="Uni2">Uni2</option>
+</select>
     </div>
     <div class="col-md-4">
-        <label for="LandLine">Details : Stream, Branch, University, Specialization disabled</label>
-        <input type="text" class="form-control" placeholder="Land Line No" id="LandLine" name="LandLine">
+        <label for="Specialization">Specialization(Doctorate)
+</label>
+<select class="form-select" aria-label="Specialization" name="Specialization" id="Specialization">
+  <option selected>Select Specialization</option>
+  <option value="Specialization1">Specialization1.</option>
+  <option value="Specialization2">Specialization2</option>
+</select>
+    </div>
+    <div class="col-md-4 my-1">
+        <label for="MastDegree">Master degree </label><br>
+        <div class="form-check form-check-inline  mx-1  ">
+            <input class="form-check-input" type="radio" name="MastDegree" id="MastDegree" value="Yes">
+            <label class="form-check-label" for="WomenInsti">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="MastDegree" id="MastDegree" value="No">
+            <label class="form-check-label" for="WomenInsti">No</label>
+          </div>  
+    </div>
+    <div class="col-md-4">
+        <label for="MastStream">Stream(Master)
+</label>
+<select class="form-select" aria-label="Stream" name="MastStream" id="MastStream">
+  <option value="" selected>Select  Stream</option>
+  <option value="Science">Science.</option>
+  <option value="Branch">Branch</option>
+</select>
+    </div>
+    <div class="col-md-4">
+        <label for="MastBranch">Branch(Master)
+</label>
+<select class="form-select" aria-label="Branch" name="MastBranch" id="MastBranch">
+  <option value=""selected>Select Branch</option>
+  <option value="branch1">branch1.</option>
+  <option value="branch2">branch2</option>
+</select>
+    </div> <div class="col-md-4">
+        <label for="MastUniversity">University(Master)
+</label>
+<select class="form-select" aria-label="MastUniversity" name="MastUniversity" id="MastUniversity">
+  <option selected>Select University</option>
+  <option value="Uni1">Uni1.</option>
+  <option value="Uni2">Uni2</option>
+</select>
+    </div>
+    <div class="col-md-4">
+        <label for="MastSpecialization">Specialization(Master)
+</label>
+<select class="form-select" aria-label="Specialization" name="MastSpecialization" id="MastSpecialization">
+  <option selected>Select Specialization</option>
+  <option value="Specialization1">Specialization1.</option>
+  <option value="Specialization2">Specialization2</option>
+</select>
     </div>
     <div class="col-md-4" >
         <label for="inputname"> Bachelor’s degree </label>
         <input type="text" class="form-control" placeholder="Mobile No." id="MobNo">
     </div>
-    <div class="col-xl-4">
-    <label for="Pan" class=" mx-3">Details: Stream, Branch, University, Specialization
+    <div class="col-md-4">
+        <label for="BatchStream">Stream(Bachelor’s)
 </label>
-<input type="text" class="form-control" placeholder="Details" id="MobNo">
-
-</div>
-<div class="col-md-4 "id="PanNumber" >
-        <label for="PanNumber">Other qualifications</label>
-        <input type="text" class="form-control" placeholder="Pan No"  id="PanNo" name="PanNumber" >
+<select class="form-select" aria-label="Stream" name="BatchStream" id="BatchStream">
+  <option value="" selected>Select  Stream</option>
+  <option value="Science">Science.</option>
+  <option value="Branch">Branch</option>
+</select>
+    </div>
+    <div class="col-md-4">
+        <label for="BatchBranch">Branch(Bachelor’s)
+</label>
+<select class="form-select" aria-label="BatchStream" name="BatchStream" id="BatchStream">
+  <option value=""selected>Select Branch</option>
+  <option value="branch1">branch1.</option>
+  <option value="branch2">branch2</option>
+</select>
+    </div> <div class="col-md-4">
+        <label for="BatchUniversity">University(Bachelor’s)
+</label>
+<select class="form-select" aria-label="BatchUniversity" name="BatchUniversity" id="BatchUniversity">
+  <option selected>Select University</option>
+  <option value="Uni1">Uni1.</option>
+  <option value="Uni2">Uni2</option>
+</select>
+    </div>
+    <div class="col-md-4">
+        <label for="BatchSpecialization">Specialization(Bachelor’s)
+</label>
+<select class="form-select" aria-label="BatchSpecialization" name="BatchSpecialization" id="BatchSpecialization">
+  <option selected>Select Specialization</option>
+  <option value="Specialization1">Specialization1.</option>
+  <option value="Specialization2">Specialization2</option>
+</select>
+    </div>
+<div class="col-md-4" id="" >
+        <label for="OtherQuali">Other qualifications</label>
+        <input type="text" class="form-control" placeholder="Other qualifications"  id="OtherQuali" name="OtherQuali" >
     </div>
     
     <div class="col-md-4  ">
         <label for="BankAccNo">Date of joining the Institute as Principal
         </label>
-        <input type="date" class="form-control " placeholder="Bank Account Number" id="BankAccNo" name="BankAccNo">
+        <input type="date" class="form-control " placeholder="Date of Joining Institute" id="Doj" name="Doj">
     </div>
     <div class="col-md-4">
         <label for="AddressBank">Appointment type select option</label>
-        <input type="text" class="form-control" placeholder="Name & Addrees of Bank" name="AddressBank" id="AddressBank">
+        <select class="form-select" aria-label="BatchSpecialization" name="BatchSpecialization" id="BatchSpecialization">
+            <option selected>Select Appointment Type</option>
+            <option value="Permanent">Permanent.</option>
+            <option value="Temporary">Temporary</option>
+            <option value="Incharge">Incharge.</option>
+            <option value="Deputation">Deputation.</option>
+ 
+        </select>
     </div>
     <div class="col-md-4  ">
-        <label for="Ifsc">Experience  select</label>
-        <input type="text" class="form-control" placeholder="Name"  id="Ifsc"  name="Ifsc" id="Ifsc">
+        <label for="Ifsc">Experience</label>
+        <select class="form-select" aria-label="BatchSpecialization" name="BatchSpecialization" id="BatchSpecialization">
+            <option selected>Select Experience</option>
+            <option value="Teaching">Teaching.</option>
+            <option value="Research">Research</option>
+            <option value="Industry">Industry.</option>
+ 
+        </select>
     </div>
     <div class="col-md-4">
-        <label for="AddressBank">Land Line Number</label>
-        <input type="text" class="form-control" placeholder="Name & Addrees of Bank" name="AddressBank" id="AddressBank">
+        <label for="LandLine">Land Line Number</label>
+        <input type="text" class="form-control" placeholder="Land Line Number" name="LandLine" id="LandLine">
     </div>
     <div class="col-md-4">
-        <label for="AddressBank">Land Line Number</label>
-        <input type="number" class="form-control" placeholder="Name & Addrees of Bank" name="AddressBank" id="AddressBank">
-    </div>
-    
-    <div class="col-md-4  ">
-        <label for="EmailId">Mobile Number</label>
-        <input type="number" class="form-control" placeholder="Email Id of Institute"   id="EmailId" name="EmailId">
+        <label for="MobileNo">Mobile No</label>
+        <input type="number" class="form-control" placeholder="Mobile No." name="MobileNo" id="MobileNo">
     </div>
     <div class="col-md-4  ">
         <label for="EmailId">E-mail Address</label>
         <input type="email" class="form-control" placeholder="Email Id of Institute"   id="EmailId" name="EmailId">
     </div>
     <div class="col-md-4  ">
-        <label for="year of Establishment">Fax
+        <label for="Fax">Fax
 </label>
-        <input type="number" class="form-control" placeholder="year of Establishment"  id="yearOfEst" name="year of Establishment">
+        <input type="number" class="form-control" placeholder="Fax"  id="Fax" name="Fax">
     </div>
     <div class="col-md-4 ">
-        <label for="Date of Approval">Number of Books Published</label>
-        <input type="number" class="form-control  3" placeholder="Date of the First approval by AICTE"  id="DateOfAppro" name="Date of Approval">
-    </div>
-    <div class="col-md-4 ">
-        <label for="Date of Approval">Number of Papers Published - National Level </label>
-        <input type="number" class="form-control  3" placeholder="Date of the First approval by AICTE"  id="DateOfAppro" name="Date of Approval">
+        <label for="NumberOfNational">Number of Papers Published - National Level </label>
+        <input type="number" class="form-control  3" placeholder="Number of Papers Published - National Level"  id="NumberOfNational" name="NumberOfNational">
     </div><div class="col-md-4 ">
-        <label for="Date of Approval">Number of Papers Published - International Level</label>
-        <input type="number" class="form-control  3" placeholder="Date of the First approval by AICTE"  id="DateOfAppro" name="Date of Approval">
+        <label for="NumberOfIntNational">Number of Papers Published - International Level</label>
+        <input type="number" class="form-control  3" placeholder="Number of Papers Published - International Leve"  id="NumberOfIntNational" name="NumberOfIntNational">
     </div>
     <div class="col-md-4 ">
-        <label for="Date of Approval">Number of Research candidates Guided</label>
-        <input type="number" class="form-control  3" placeholder="Date of the First approval by AICTE"  id="DateOfAppro" name="Date of Approval">
+        <label for="NumberOfGuided">Number of Research candidates Guided</label>
+        <input type="number" class="form-control  3" placeholder="Number of Research candidates Guided"  id="NumberOfGuided" name="NumberOfGuided">
     </div>
     <div class="col-md-4 ">
-        <label for="Date of Approval">Number of Research candidates Guided</label>
-        <input type="number" class="form-control  3" placeholder="Date of the First approval by AICTE"  id="DateOfAppro" name="Date of Approval">
+        <label for="NumberOfGuiding">Number of Research candidates Guiding</label>
+        <input type="number" class="form-control  3" placeholder="Number of Research candidates Guiding"  id="NumberOfGuiding" name="NumberOfGuiding">
     </div>
 
     
