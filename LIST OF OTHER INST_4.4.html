@@ -28,51 +28,58 @@
 <form name="myform" class="form-group" action="#" id="InstiTuteDetForm">
     <div class="row bg-light text-dark" id="BasicDetails" >
     <div class="col-md-4  ">
-        <label for="inputname">Name & Address of Institution
+        <label for="Name">Name & Address of Institution
 </label>
 <label class="requiredField" style="color:red;"> *</label>
 
-        <input type="text" class="form-control" id="InstiName"placeholder=" Institute Name" required/>
+        <input type="text" class="form-control" id="InstiName"placeholder=" Institute Name" name="Institute Name" required/>
     </div>
     <div class="col-md-4  1">
-        <label for="Address" >Same Campus Options (Y/N)</label>
+        <label for="Same Campus" >Same Campus Options (Y/N)</label>
         <label class="requiredField" style="color:red;"> *</label>
 
-        <input type="text" class="form-control" placeholder="Address" id="Address" required/>
-    </div>
+        <select class="form-select" aria-label="Same Campus" id="SameCamp" >
+  <option value="Yes">Yes</option>
+  <option value="No">No.</option>
+  </select>
+  </div>
+  
     <div class="col-md-4">
       
-        <label for="Place">Area
+        <label for="Area">Area
 </label>
 <label style="color:red;"> *</label>
 
-        <input type="text" class="form-control" placeholder="Name"  id="" name="" id="Place" name="Place">
+        <input type="text" class="form-control" placeholder="Area"   id="Area" name="Area" required>
     </div>
     <div class="col-md-4">
-        <label for="District">Survey No
+        <label for="Survey">Survey No
+          <label class="requiredField" style="color:red;"> *</label>
+
         </label>
-        <input type="text" class="form-control" placeholder="District" name="District" id="District">
+        <input type="text" class="form-control" placeholder="Survey No" name="Survey" id="Survey" required>
     </div>
     <div class="col-md-4">
-        <label for="State">Type of Education offered
-            
+        <label for="Type of Education">Type of Education offered
+          <label class="requiredField" style="color:red;"> *</label>
+
             </label>
-        <select class="form-select" aria-label="State">
-  <option selected>Select State</option>
-  <option value="Maharashtra">Chairman.</option>
-  <option value="Gujrat">Gujrat</option>
-  <option value="Karnataka"> Karnataka</option>
-  <option value="Goa"> Goa</option>
+        <select class="form-select" aria-label="Type of Education" id="TypeOfEducation" >
+  <option value="Type1">Type1.</option>
+  <option value="Type2">Type2</option>
+ 
 
 </select>
     </div>
     <div class="col-md-4">
-        <label for="PinCode">Type of Education offered</label>
-        <input type="number" class="form-control" placeholder="Pin code" name="PinCode" id="PinCode">
+        <label for="Type Of Education">Affiliating / Recognition Authority        
+          <label class="requiredField" style="color:red;"> *</label>
+      </label>
+        <input type="text" class="form-control" placeholder="Affiliating / Recognition Authority" name="Affiliating / Recognition Authority" id="AuthorityName" required>
     </div>
 
     <div class="text-center">
-   <button type="Submit" class="btn btn-info my-2" id="SubBtn" >Submit</button>
+   <button type="submit" class="btn btn-info my-2" id="SubBtn" >Submit</button>
 
     </div>
 
@@ -93,56 +100,26 @@
 <script type="module">
   import * as func from"./validation.js"
   $(document).ready(function(){
-   
-    $("#NxtBtn").click(function(){
-     
     
-    var InstiName=document.getElementById("InstiName").value;
-    var PinCode=document.getElementById("PinCode").value;
-    var MobNo=document.getElementById("MobNo").value;
-    var LandLine=document.getElementById("LandLine").value;
-    var PanNo=document.getElementById("PanNo").value
-   
+    $("#SubBtn").click(function(e){
+      //var InstiName =document.getElementById("InstiName").className;
+      var Area =document.getElementById("Area").value;
 
-// if(func.ValidString(InstiName)&&func.ValidPin(PinCode)&&func.ValidMobNo(MobNo)&&func.ValidPanNo(PanNo)){
- // if(func.ValidString(InstiName)&&func.ValidPin(PinCode)&&func.ValidMobNo(MobNo)&&func.ValidPanNo(PanNo)&&func.ValidLandLine(LandLine)){
-  document.getElementById("BasicDetails").hidden=true;
-      document.getElementById("FileUpload").hidden=false;
-      document.getElementById("NxtBtn").hidden=true;
-      document.getElementById("PrevBtn").hidden=false;
-      document.getElementById("SubBtn").hidden=false;
- //}
+      var Survey =document.getElementById("Survey").value;
+      var AuthorityName =document.getElementById("AuthorityName").value;
 
-  });
-
-  
-    $("#PrevBtn").click(function(){
-     
-     document.getElementById("BasicDetails").hidden=false;
-     document.getElementById("FileUpload").hidden=true;
-     document.getElementById("NxtBtn").hidden=false;
-     document.getElementById("PrevBtn").hidden=true;
-     document.getElementById("SubBtn").hidden=true;
-   })
-  
-
-  $("#SubBtn").click(function(e){
-   
-   
-    var InstiName=document.getElementById("InstiName").value;
-    var PinCode=document.getElementById("PinCode").value;
-    var MobNo=document.getElementById("MobNo").value;
-    var MobNo=document.getElementById("MobNo").value;
-    var MobNo=document.getElementById("MobNo").value;
-    var x= document.getElementById("formFile").required;
-   alert(x);
-
- if(func.ValidMobNo(MobNo)){
-  alert("validate");
- }else{
-  e.preventDefault();
- }
-  });
+        if(func.ValidInput("id","InstiName")&&func.ValidInput("id","AuthorityName")&&func.CheckNull(Area)&&func.CheckNull(Survey)){
+           alert("jj")
+           
+        }
+        else{
+         
+          e.preventDefault()
+        }
+        
+});
+    
+    
 });
 </script>
 

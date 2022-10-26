@@ -1,13 +1,59 @@
+export function ValidInput(type,name){
+    if(type=="class"){
+    var data=document.getElementsByClassName(name);
+    var i;
+    console.log(data);
+     var ln=data.length
+    for(i=0;i<data.length;i++){
+     var id=data[i].id;
+    if( data[i].value==""){
+         
+          SendAlert("Please filled all input field","alert alert-danger");
+          setTimeout(()=>{
+            SendAlert("","")
+        },3000)
+          return false;
+    }else if(1==1){
+      ValidString(data[i].value,data[i].name)
+      
+    } 
+    else{ 
+       // alert("");
+    }
+    }
+}
+else{
+    
+        var data= document.getElementById(name);
+        
+        if( data.value==""){
+         
+            SendAlert(data.name+" is required","alert alert-danger");
 
+            setTimeout(()=>{
+                SendAlert("","")
+            },3000)
+            return false;
+      }else if(data.type=='text'){
+        if(!ValidString(data.value,data.name)){
+            return false
+        }
+        return true;
+        
+      } 
 
-export function ValidString(a){
-    var letters=/^[A-Za-z]+$/;
+    }
+    
+}
+
+export function ValidString(a,name="Valid input or filled required field"){
+    var letters=/^[A-Z a-z]+$/;
     if(letters.test(a))
     {
      return true;
     }
     else{
-        SendAlert("Please Enter Valid Name.","alert alert-danger")
+        SendAlert("Please enter valid "+name,"alert alert-danger")
         setTimeout(()=>{
             SendAlert("","")
         },3000)
@@ -84,9 +130,13 @@ export function ValidLandLine(a){
 
 }
 export function CheckNull(a){
-    alert("indf");
-        if(a==null){
+        if(a==null||a==""){
+            SendAlert("please fill all field(*)","alert alert-danger")
+        setTimeout(()=>{
+            SendAlert("","")
+        },3000)
             return false;
+
         }
         else{
             return true;
@@ -109,6 +159,10 @@ export function ValidPanNo(a){
         
     }
 }
+
+
+
+
 export function SendAlert(msg,type){
   document.getElementById("alertBox").className=type;
   document.getElementById("alert-msg").innerHTML=msg;

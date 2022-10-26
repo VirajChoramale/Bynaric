@@ -144,10 +144,7 @@
   <option value="Specialization2">Specialization2</option>
 </select>
     </div>
-    <div class="col-md-4" >
-        <label for="inputname"> Bachelor’s degree </label>
-        <input type="text" class="form-control" placeholder="Mobile No." id="MobNo">
-    </div>
+    
     <div class="col-md-4">
         <label for="BatchStream">Stream(Bachelor’s)
 </label>
@@ -220,7 +217,7 @@
     </div>
     <div class="col-md-4">
         <label for="MobileNo">Mobile No</label>
-        <input type="number" class="form-control" placeholder="Mobile No." name="MobileNo" id="MobileNo">
+        <input type="number" class="form-control" placeholder="Mobile No." name="MobNo" id="MobNo">
     </div>
     <div class="col-md-4  ">
         <label for="EmailId">E-mail Address</label>
@@ -246,14 +243,7 @@
         <label for="NumberOfGuiding">Number of Research candidates Guiding</label>
         <input type="number" class="form-control  3" placeholder="Number of Research candidates Guiding"  id="NumberOfGuiding" name="NumberOfGuiding">
     </div>
-
-    
-    
-    
-
-    
-   
-    <div class="text-center">
+ <div class="text-center">
    <button type="Submit" class="btn btn-info my-2" id="SubBtn" >Submit</button>
 
     </div>
@@ -276,56 +266,37 @@
   import * as func from"./validation.js"
   $(document).ready(function(){
 
-    $("#NxtBtn").click(function(){
+    $("#SubBtn").click(function(e){
      
     
-    var InstiName=document.getElementById("InstiName").value;
-    var PinCode=document.getElementById("PinCode").value;
+    var Fname=document.getElementById("Fname").value;
+    var Surname=document.getElementById("Surname").value;
     var MobNo=document.getElementById("MobNo").value;
     var LandLine=document.getElementById("LandLine").value;
-    var PanNo=document.getElementById("PanNo").value
    
 
 // if(func.ValidString(InstiName)&&func.ValidPin(PinCode)&&func.ValidMobNo(MobNo)&&func.ValidPanNo(PanNo)){
-  if(func.ValidString(InstiName)&&func.ValidPin(PinCode)&&func.ValidMobNo(MobNo)&&func.ValidPanNo(PanNo)&&func.ValidLandLine(LandLine)){
-  document.getElementById("BasicDetails").hidden=true;
-      document.getElementById("FileUpload").hidden=false;
-      document.getElementById("NxtBtn").hidden=true;
-      document.getElementById("PrevBtn").hidden=false;
-      document.getElementById("SubBtn").hidden=false;
+  if(func.ValidString(Fname)&&func.ValidString(Surname)&&func.ValidMobNo(MobNo)&&func.ValidLandLine(LandLine)){
+  e.preventDefault();
+  alert("pass");
+ }else{
+  e.preventDefault()
  }
 
   });
 
   
-    $("#PrevBtn").click(function(){
+   /* $("#PrevBtn").click(function(){
      
      document.getElementById("BasicDetails").hidden=false;
      document.getElementById("FileUpload").hidden=true;
      document.getElementById("NxtBtn").hidden=false;
      document.getElementById("PrevBtn").hidden=true;
      document.getElementById("SubBtn").hidden=true;
-   })
+   })*/
   
 
-  $("#SubBtn").click(function(e){
-   
-    alert(
-    "clked"
-    );
-    var InstiName=document.getElementById("InstiName").value;
-    var PinCode=document.getElementById("PinCode").value;
-    var MobNo=document.getElementById("MobNo").value;
-    var MobNo=document.getElementById("MobNo").value;
-    var MobNo=document.getElementById("MobNo").value;
-   
-
- if(func.ValidMobNo(MobNo)){
-  alert("validate");
- }else{
-  e.preventDefault();
- }
-  });
+  
 });
 </script>
 

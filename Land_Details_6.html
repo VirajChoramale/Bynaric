@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>Land Details</title>
+</head>
+<style>
+  td{
+    width: 50%;
+    text-align: left;
+    font-weight: bold;
+    overflow: hidden;
+
+  }
+  
+</style>
+    <div class="container text-center my-1">
+        <div class="" role="alert" id="alertBox">
+          <strong><p id="alert-msg"></p></strong>
+        </div>
+        
+        
+        <div class="text-center inline">
+          <img src="./dbatu.jpg" class="rounded" alt="...">
+        </div>
+
+        <div class="container  19  card  " style="margin-top:20px;">
+          <div class="text-center">
+            <h4>Land Details</h4>
+        </div>
+        <form name="myform" class="form-group" action="#" id="LandDetailsForm">
+          
+
+          <div class="row bg-light text-dark" id="Form_1" >
+          <table class="table table-bordered">
+           <tr>
+             <td>
+                Location <label class="requiredField" style="color:red;"> *</label>
+
+            </td>
+           <td>      
+            <select class="form-select req" aria-label="Type of Institution"  name="Location"required>
+                <option value="" selected>Select Type</option>
+                <option value="Govt">Rural.</option>
+                <option value="Constituent">Non Rural</option>
+              </select>          
+             </td>
+        </tr>
+        <tr>
+            <td>
+                Land ownership details<label class="requiredField" style="color:red;"> *</label>
+
+           </td>
+          <td>      
+           <select class="form-select req" aria-label="Land ownership details"  name=" Land ownership details"required>
+               <option value="" selected>Select details </option>
+               <option value="Gift Deed">Gift Deed</option>
+               <option value="Govt Lease">Govt Lease</option>
+               <option value="Registered Sale Deed">Registered Sale Deed</option>
+
+             </select>          
+            </td>
+       </tr>
+       <tr>
+        <td>
+            Total area (in acres)  <label class="requiredField" style="color:red;"> *</label>
+
+        </td>
+        <td>        
+        <input type="Number" class="form-control chknull" placeholder="Total area (in acres)"  id="TotArea" name="TotArea"required>
+        </td>
+        </tr>
+        <tr>
+            <td>
+                Land Registered in the Name of<label class="requiredField" style="color:red;"> *</label>
+
+            </td>
+            <td>        
+            <input type="text" class="form-control req" placeholder="Land Registered in the Name of"  id="LandRegiName" name="Land Registered in the Name of" required>
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    Land registered with<label class="requiredField" style="color:red;"> *</label>
+
+                                </td>
+                <td>        
+                <input type="text" class="form-control req" placeholder=" Land registered with"  id="LandRegiWith" name=" Land registered with"required>
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                        Land registration date <label class="requiredField" style="color:red;"> *</label>
+
+                    </td>
+                    <td>        
+                    <input type="date" class="form-control chknull" placeholder="Land registration date"  id="LandRegiDate" name="LandRegiDate" required>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Registration Number <label class="requiredField" style="color:red;"> *</label>
+
+                        </td>
+                        <td>        
+                        <input type="text" class="form-control chknull" placeholder=" Registration Number "  id="RegiNum" name=" Registration Number"required>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Survey Number <label class="requiredField" style="color:red;"> *</label>
+
+                            </td>
+                            <td>        
+                            <input type="text" class="form-control req" placeholder="Survey Number"  id="Sno" name="  Survey Number "required>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Land Use Certificate issued by   <label class="requiredField" style="color:red;"> *</label>
+                             
+                                </td>
+                                <td>        
+                                <input type="text" class="form-control req" placeholder=" Land Use Certificate issued by "  id="LandCertiIssuedBy" name="Land Use Certificate issued by"required>
+                                </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Land Use Certificate date<label class="requiredField" style="color:red;"> *</label>
+
+                                    </td>
+                                    <td>        
+                                    <input type="date" class="form-control chknull" placeholder="Land Use Certificate date"  id="Sno" name="Land Use Certificate date"required>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Mortgaged Land  <label class="requiredField" style="color:red;"> *</label>
+
+                                        </td>
+                                        <td>        
+                                            <select class="form-select req" aria-label="Type of Institution" name="Mortgaged Land " required>
+                                                
+                                                <option  selected value="No">No</option>
+                                                <option value="Yes">Yes</option>
+
+                                            </select>
+                                            </td>                                      
+                                        </tr>
+                                
+                                        
+                             
+                                    
+         </table>
+        </div>
+        <div class="d-flex justify-content-end my-2" >
+            <button type="button" class="btn btn-info" id="NxtBtn" >Next</button>
+             </div>
+        <div class="row bg-light text-dark" id="Form_2" hidden>
+            <table class="table table-bordered">
+            <tr><div class="col-md-4 my-4">
+                <div class="mb-3">
+              <td><label for="formFile" class="form-label ">Upload/Attach: Documents for Transfer of Lands in the name of the Trust / Society, 
+                Permissions, Land Use Certificate, Tax paid receipt<label class="requiredField" style="color:red;"> *</label>
+            </label></td>
+             <td> <input class="form-control my-2" type="file" id="formFile" required></td>
+              </tr>
+              
+            </table>
+            <div class="d-flex justify-content-start">
+                <button type="button" class="btn btn-info" id="PrevBtn" >Prevaious</button>
+             
+                 </div>
+                 <div class="text-center">
+                    <button type="Submit" class="btn btn-info my-2" id="SubBtn" hidden>Submit</button>
+                 
+                     </div>
+            </div> 
+       
+        </div>
+
+        
+        </form>
+       </div>
+       
+       
+
+
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    
+                </script>
+              <script src="https://code.jquery.com/jquery-3.6.1.min.js"integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="crossorigin="anonymous"> </script> 
+              <script type="module">
+               import * as func from"./validation.js"
+
+                $(document).ready(function(){
+$("#NxtBtn").click(function(){
+var chckBool=false;
+var chkN=document.getElementsByClassName("chknull");
+var ln=chkN.length
+var i;
+for(i=0;i<ln;i++){
+    var val=chkN[i].value;
+    if(func.CheckNull(val)){
+        chckBool=true;
+    }
+    else{
+        chckBool=true;
+    }
+}
+  
+   
+
+if(func.ValidInput("class","req")&&chckBool){
+    document.getElementById("NxtBtn").hidden=true;
+  document.getElementById("Form_1").hidden=true;
+  document.getElementById("Form_2").hidden=false;
+  document.getElementById("SubBtn").hidden=false;
+   var x=document.getElementsByClassName("req");
+}
+
+
+});
+$("#PrevBtn").click(function(){
+ 
+ 
+   document.getElementById("Form_1").hidden=false;
+   document.getElementById("Form_2").hidden=true;
+   document.getElementById("NxtBtn").hidden=false;
+
+ 
+ 
+ });
+
+ $("#SubBtn").click(function(e){
+ 
+
+
+
+var slect=document.getElementById("New_Crs").value
+ var numberOfRadio= $('input:radio').length;
+ var numberOfChecked=$('input:radio:checked').length;
+var requiredNo=numberOfRadio/2;
+  if(requiredNo==numberOfChecked&&slect!=""){
+    func.SendAlert("Submited Successfully.","alert alert-success")
+        setTimeout(()=>{
+            func.SendAlert("","")
+        },3000)
+  }else{
+    e.preventDefault();
+    func.SendAlert("Please fill all requird(*)field.","alert alert-danger")
+        setTimeout(()=>{
+            func.SendAlert("","")
+        },3000)
+  }
+ 
+ 
+
+ 
+ });
+ 
+
+
+});
+                
+</script>          
+</body>
+</html>
