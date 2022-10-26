@@ -1,4 +1,5 @@
 export function ValidInput(type,name){
+    var cnt;
     if(type=="class"){
     var data=document.getElementsByClassName(name);
     var i;
@@ -8,19 +9,20 @@ export function ValidInput(type,name){
      var id=data[i].id;
     if( data[i].value==""){
          
-          SendAlert("Please filled all input field","alert alert-danger");
+          SendAlert("Please fill all input field","alert alert-danger");
           setTimeout(()=>{
             SendAlert("","")
         },3000)
           return false;
     }else if(1==1){
-      ValidString(data[i].value,data[i].name)
+      if(!ValidString(data[i].value,data[i].name)){
+        return false
+      }
+
       
     } 
-    else{ 
-       // alert("");
-    }
-    }
+    
+    } return true;
 }
 else{
     
@@ -43,6 +45,7 @@ else{
       } 
 
     }
+    
     
 }
 
@@ -130,8 +133,9 @@ export function ValidLandLine(a){
 
 }
 export function CheckNull(a){
-        if(a==null||a==""){
-            SendAlert("please fill all field(*)","alert alert-danger")
+   
+        if(a.length<1){
+            SendAlert("please fill all required field(*)","alert alert-danger")
         setTimeout(()=>{
             SendAlert("","")
         },3000)

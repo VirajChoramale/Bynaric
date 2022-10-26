@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>Building Details</title>
+</head>
+<style>
+  td{
+    width: 50%;
+    text-align: left;
+    font-weight: bold;
+    overflow: hidden;
+
+  }
+  
+</style>
+    <div class="container text-center my-1">
+        <div class="" role="alert" id="alertBox">
+          <strong><p id="alert-msg"></p></strong>
+        </div>
+        
+        
+        <div class="text-center inline">
+          <img src="./dbatu.jpg" class="rounded" alt="...">
+        </div>
+
+        <div class="container  19  card  " style="margin-top:20px;">
+          <div class="text-center">
+            <h4>Building Details</h4>
+        </div>
+        <form name="myform" class="form-group" action="#" id="LandDetailsForm">
+          
+
+          <div class="row bg-light text-dark" id="Form_1" >
+          <table class="table table-bordered">
+           <tr>
+             <td>
+                Building Status <label class="requiredField" style="color:red;"> *</label>
+
+            </td>
+           <td>      
+            <select class="form-select chknull" aria-label="Building Status"  name="Building Status"required>
+                <option value="" selected>Select Type</option>
+                <option value="Construction Completed">Construction Completed</option>
+                <option value="Under Construction">Under Construction</option>
+              </select>          
+             </td>
+        </tr>
+        <tr>
+            <td>
+                No. of Buildings in the campus Planned<label class="requiredField" style="color:red;"> *</label>
+
+           </td>
+             <td>
+           <input type="number" class="form-control chknull " id="BuildingCnt" placeholder=" No. of Buildings in the campus Planned" name="No. of Buildings in the campus Planned">        
+            </td>
+       </tr>
+       <tr>
+        <td>
+            No of buildings completed on the date of application  <label class="requiredField" style="color:red;"> *</label>
+
+        </td>
+        <td>        
+        <input type="Number" class="form-control chknull" placeholder="No of buildings completed on the date of application"  id="TotArea" name="No of buildings completed on the date of application" required>
+        </td>
+        </tr>
+        <tr>
+            <td>
+                Total built up area Planned<label class="requiredField" style="color:red;"> *</label>
+
+            </td>
+            <td>        
+            <input type="number" class="form-control chknull" placeholder="Total built up area Planned(Sq.ft)"  id="LandRegiName" name="Land Registered in the Name of" required>
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    Total built up Area ready<label class="requiredField" style="color:red;"> *</label>
+
+                                </td>
+                <td>        
+                <input type="number" class="form-control chknull" placeholder="  Total built up Area ready(sq.ft)"  id="LandRegiWith" name="Total built up Area ready"required>
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                        Total Instructional area (Carpet Area) ready <label class="requiredField" style="color:red;"> *</label>
+
+                    </td>
+                    <td>        
+                    <input type="number" class="form-control chknull" placeholder=" Total Instructional area (Carpet Area)  sq.ft"  id="LandRegiDate" name=" Total Instructional area (Carpet Area) " required>
+                    </td>
+                    </tr>
+                
+                        <tr>
+                            <td>
+                                Total Administrative area (Carpet Area) ready <label class="requiredField" style="color:red;"> *</label>
+
+                            </td>
+                            <td>        
+                            <input type="text" class="form-control chknull" placeholder="Total Administrative area (Carpet Area)ready"  id="Sno" name="Total Administrative area (Carpet Area) 
+                            ready"required>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                 Total Circulation area ready  <label class="requiredField" style="color:red;"> *</label>
+                             
+                                </td>
+                                <td>        
+                                <input type="text" class="form-control chknull" placeholder="  Total Circulation area ready"  id="LandCertiIssuedBy" name=" Total Circulation area ready"required>
+                                </td>
+                                </tr>
+                         
+                                    
+         </table>
+        </div>
+        <div class="text-center">
+            <button type="Submit" class="btn btn-info my-2" id="SubBtn" >Submit</button>
+         
+        </div>
+       
+        </div>
+
+        
+        </form>
+       </div>
+       
+       
+
+
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    
+                </script>
+              <script src="https://code.jquery.com/jquery-3.6.1.min.js"integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="crossorigin="anonymous"> </script> 
+              <script type="module">
+               import * as func from"./validation.js"
+
+                $(document).ready(function(){
+$("#SubBtn").click(function(e){
+var chckBool=false;
+var chkN=document.getElementsByClassName("chknull");
+var ln=chkN.length
+var i ,cnt;
+
+for(i=0;i<ln;i++){
+    var val=chkN[i].value;
+    if(!func.CheckNull(val)){
+       
+        return false;
+    }
+    
+        chckBool=true;
+    
+}
+  
+
+if(chckBool){
+    e.preventDefault();
+
+   func.SendAlert("Submitted Successfully","alert alert-success")
+}else{
+    e.preventDefault();
+}
+
+
+});
+
+
+
+ 
+
+
+});
+                
+</script>          
+</body>
+</html>

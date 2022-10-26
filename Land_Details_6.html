@@ -116,7 +116,7 @@
 
                             </td>
                             <td>        
-                            <input type="text" class="form-control req" placeholder="Survey Number"  id="Sno" name="  Survey Number "required>
+                            <input type="text" class="form-control chknull" placeholder="Survey Number"  id="Sno" name="  Survey Number "required>
                             </td>
                             </tr>
                             <tr>
@@ -134,7 +134,7 @@
 
                                     </td>
                                     <td>        
-                                    <input type="date" class="form-control chknull" placeholder="Land Use Certificate date"  id="Sno" name="Land Use Certificate date"required>
+                                    <input type="date" class="form-control chknull" placeholder="Land Use Certificate date"  id="LandUseDate" name="Land Use Certificate date"required>
                                     </td>
                                     </tr>
                                     <tr>
@@ -203,25 +203,25 @@ $("#NxtBtn").click(function(){
 var chckBool=false;
 var chkN=document.getElementsByClassName("chknull");
 var ln=chkN.length
-var i;
+var i ,cnt;
+
 for(i=0;i<ln;i++){
     var val=chkN[i].value;
-    if(func.CheckNull(val)){
-        chckBool=true;
+    if(!func.CheckNull(val)){
+        
+        return false;
     }
-    else{
+    
         chckBool=true;
-    }
+    
 }
   
-   
 
 if(func.ValidInput("class","req")&&chckBool){
     document.getElementById("NxtBtn").hidden=true;
   document.getElementById("Form_1").hidden=true;
   document.getElementById("Form_2").hidden=false;
   document.getElementById("SubBtn").hidden=false;
-   var x=document.getElementsByClassName("req");
 }
 
 
