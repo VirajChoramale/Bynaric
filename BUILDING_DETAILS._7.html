@@ -119,13 +119,30 @@
                                     
          </table>
         </div>
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-info my-2" id="NxtBtn" >Next</button>
+             </div>
+        <div class="row"id="Form_2" hidden>
+            <table class="table table-bordered">
+                <tr>
+                    <td>
+                        Upload/Attach: Approved Building Plans(Please note: Without out ready instructional area, the application will not be processed further. It shall be responsibility of the college to inform the University as and when the necessary building area is ready against the requirement)
+                        <label class="requiredField" style="color:red;"> *</label>
+                    </td>
+                    <td>
+                        <input class="form-control my-4" type="file" id="formFile" accept=".pdf" required>
+
+                    </td>
+                </tr>
+     
+            </table>
+        </div>
         <div class="text-center">
-            <button type="Submit" class="btn btn-info my-2" id="SubBtn" >Submit</button>
+            <button type="Submit" class="btn btn-info my-2" id="SubBtn"  hidden>Submit</button>
          
         </div>
-       
         </div>
-
+     
         
         </form>
        </div>
@@ -142,7 +159,7 @@
                import * as func from"./validation.js"
 
                 $(document).ready(function(){
-$("#SubBtn").click(function(e){
+$("#NxtBtn").click(function(){
 var chckBool=false;
 var chkN=document.getElementsByClassName("chknull");
 var ln=chkN.length
@@ -161,11 +178,13 @@ for(i=0;i<ln;i++){
   
 
 if(chckBool){
-    e.preventDefault();
-
+     document.getElementById("Form_1").hidden=true;
+     document.getElementById("Form_2").hidden=false;
+     document.getElementById("NxtBtn").hidden=true;
+     document.getElementById("SubBtn").hidden=false;
    func.SendAlert("Submitted Successfully","alert alert-success")
 }else{
-    e.preventDefault();
+    
 }
 
 
