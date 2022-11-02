@@ -1,0 +1,1009 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>Progg Details</title>
+</head>
+<body>
+    
+<div class="container text-center my-1 ">
+<div class="" role="alert" id="alertBox">
+  <strong><p id="alert-msg"></p></strong>
+</div>
+
+</div>
+<div class="text-center inline">
+  <img src="./dbatu.jpg" class="rounded" alt="...">
+</div>
+<div class="container  19  card " style="margin-top:20px;">
+<div class="text-center">
+    <h4>PROGRAMME & COURSE DETAILS
+    </h4>
+</div>
+<form name="myform" class="form-group" action="#" id="">
+    <div class="row bg-light text-dark" id="BasicDetails" >
+    <div class="col-md-6  ">
+        <label for="Name">Affiliation Request Type
+
+</label>
+<label class="requiredField" style="color:red;"> *</label>
+
+        <input type="text" class="form-control" id="InstiName"placeholder=" Institute Name" name="Institute Name" required/>
+    </div>
+    <div class="col-md-6  1">
+        <label for="Same Campus" >Affiliation Type</label>
+        <label class="requiredField" style="color:red;"> *</label>
+
+        <select class="form-select" aria-label="Same Campus" id="SameCamp" >
+  <option value="Yes">Yes</option>
+  <option value="No">No.</option>
+  </select>
+  </div>
+  
+    
+    <div class="col-md-6">
+        <label for="Survey">Programme
+          <label class="requiredField" style="color:red;"> *</label>
+
+        </label>
+        <select class="form-select" name="" id="prog_sel">
+            <option value="0" selected>Select Program</option>
+            <option value="engg">Engineering & Technology</option>
+            <option value="pharm">Pharmacy/ Architecture</obtion>
+            <option value="hotel_manage">Hotel Management and Catering Technology</option>
+            <obtion></obtion>
+        </select>
+    </div>
+    <div class="col-md-6">
+        <label for="Type of Education">Level
+          <label class="requiredField" style="color:red;"> *</label>
+
+            </label>
+        <select class="form-select" aria-label="Type of Education" id="TypeOfEducation" >
+  <option value="Type1">UG.</option>
+  <option value="Type2">PG</option>
+ 
+
+</select>
+    </div>
+
+   
+    
+    
+        <label for="Type Of Education">(Enter information about each course)     
+          <label class="requiredField" style="color:red;"> *</label>
+      </label>
+      <table class="table table-bordered" id="Engg_table" hidden>
+       <tr>
+      <td class="text-center my-2" colspan="3"><strong>Civil</strong></td>
+    </tr>
+    <tr>
+        <td><label>select shift</label>
+            <select name="" id="" class="form-select">
+                <option value="">First
+
+                </option>
+                <option>
+                Second
+                </option>
+            </select>
+        </td>
+        <td><label>Full Time/Part Time</label>
+            <select name="" id="" class="form-select">
+                <option value="">Full Time
+
+                </option>
+                <option>
+                Part Time
+                </option>
+            </select>
+        </td>
+        <td>
+        <label>
+            Year of Starting
+        </label>
+        <input type="text" class="form-control">
+        </td>   
+        </tr>  
+        <tr>  
+        <td>
+            <label>Course Duration</label>
+        <input type="text" class="form-control">    
+        </td>
+        <td>
+            <label>Current Intake </label>
+        <input type="text" class="form-control">    
+        </td>
+        <td>
+            <label>Number of Students Admitted</label>
+        <input type="text" class="form-control">    
+        </td>
+     </tr>
+     <tr>  
+        <td>
+            <label>Applied Intake</label>
+        <input type="text" class="form-control">    
+        </td>
+        <td>
+            <label>AICTE Approval the Current Year</label>
+        <input type="text" class="form-control">    
+        </td>
+        <td>
+            <label>Accreditation status</label>
+        <input type="text" class="form-control">    
+        </td>
+     </tr>
+     <tr>
+        <td class="text-center my-2" colspan="3"><strong>Mechanical</strong></td>
+      </tr>
+      <tr>
+          <td><label>select shift</label>
+              <select name="" id="" class="form-select">
+                  <option value="">First
+  
+                  </option>
+                  <option>
+                  Second
+                  </option>
+              </select>
+          </td>
+          <td><label>Full Time/Part Time</label>
+              <select name="" id="" class="form-select">
+                  <option value="">Full Time
+  
+                  </option>
+                  <option>
+                  Part Time
+                  </option>
+              </select>
+          </td>
+          <td>
+          <label>
+              Year of Starting
+          </label>
+          <input type="text" class="form-control">
+          </td>   
+          </tr>  
+          <tr>  
+          <td>
+              <label>Course Duration</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Current Intake </label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Number of Students Admitted</label>
+          <input type="text" class="form-control">    
+          </td>
+       </tr>
+       <tr>  
+          <td>
+              <label>Applied Intake</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>AICTE Approval the Current Year</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Accreditation status</label>
+          <input type="text" class="form-control">    
+          </td>
+       </tr>
+       <tr>
+        <td class="text-center my-2" colspan="3"><strong>Computer</strong></td>
+      </tr>
+      <tr>
+          <td><label>select shift</label>
+              <select name="" id="" class="form-select">
+                  <option value="">First
+  
+                  </option>
+                  <option>
+                  Second
+                  </option>
+              </select>
+          </td>
+          <td><label>Full Time/Part Time</label>
+              <select name="" id="" class="form-select">
+                  <option value="">Full Time
+  
+                  </option>
+                  <option>
+                  Part Time
+                  </option>
+              </select>
+          </td>
+          <td>
+          <label>
+              Year of Starting
+          </label>
+          <input type="text" class="form-control">
+          </td>   
+          </tr>  
+          <tr>  
+          <td>
+              <label>Course Duration</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Current Intake </label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Number of Students Admitted</label>
+          <input type="text" class="form-control">    
+          </td>
+       </tr>
+       <tr>  
+          <td>
+              <label>Applied Intake</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>AICTE Approval the Current Year</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Accreditation status</label>
+          <input type="text" class="form-control">    
+          </td>
+       </tr>
+       <tr>
+        <td class="text-center my-2" colspan="3"><strong>Electronics and Telecommunication</strong></td>
+      </tr>
+      <tr>
+          <td><label>select shift</label>
+              <select name="" id="" class="form-select">
+                  <option value="">First
+  
+                  </option>
+                  <option>
+                  Second
+                  </option>
+              </select>
+          </td>
+          <td><label>Full Time/Part Time</label>
+              <select name="" id="" class="form-select">
+                  <option value="">Full Time
+  
+                  </option>
+                  <option>
+                  Part Time
+                  </option>
+              </select>
+          </td>
+          <td>
+          <label>
+              Year of Starting
+          </label>
+          <input type="text" class="form-control">
+          </td>   
+          </tr>  
+          <tr>  
+          <td>
+              <label>Course Duration</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Current Intake </label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Number of Students Admitted</label>
+          <input type="text" class="form-control">    
+          </td>
+       </tr>
+       <tr>  
+          <td>
+              <label>Applied Intake</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>AICTE Approval the Current Year</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Accreditation status</label>
+          <input type="text" class="form-control">    
+          </td>
+       </tr>
+       <tr>
+        <td class="text-center my-2" colspan="3"><strong>Electrical</strong></td>
+      </tr>
+      <tr>
+          <td><label>select shift</label>
+              <select name="" id="" class="form-select">
+                  <option value="">First
+  
+                  </option>
+                  <option>
+                  Second
+                  </option>
+              </select>
+          </td>
+          <td><label>Full Time/Part Time</label>
+              <select name="" id="" class="form-select">
+                  <option value="">Full Time
+  
+                  </option>
+                  <option>
+                  Part Time
+                  </option>
+              </select>
+          </td>
+          <td>
+          <label>
+              Year of Starting
+          </label>
+          <input type="text" class="form-control">
+          </td>   
+          </tr>  
+          <tr>  
+          <td>
+              <label>Course Duration</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Current Intake </label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Number of Students Admitted</label>
+          <input type="text" class="form-control">    
+          </td>
+       </tr>
+       <tr>  
+          <td>
+              <label>Applied Intake</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>AICTE Approval the Current Year</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Accreditation status</label>
+          <input type="text" class="form-control">    
+          </td>
+       </tr>
+       <tr>
+        <td class="text-center my-2" colspan="3"><strong>Information Technology</strong></td>
+      </tr>
+      <tr>
+          <td><label>select shift</label>
+              <select name="" id="" class="form-select">
+                  <option value="">First
+  
+                  </option>
+                  <option>
+                  Second
+                  </option>
+              </select>
+          </td>
+          <td><label>Full Time/Part Time</label>
+              <select name="" id="" class="form-select">
+                  <option value="">Full Time
+  
+                  </option>
+                  <option>
+                  Part Time
+                  </option>
+              </select>
+          </td>
+          <td>
+          <label>
+              Year of Starting
+          </label>
+          <input type="text" class="form-control">
+          </td>   
+          </tr>  
+          <tr>  
+          <td>
+              <label>Course Duration</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Current Intake </label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Number of Students Admitted</label>
+          <input type="text" class="form-control">    
+          </td>
+       </tr>
+       <tr>  
+          <td>
+              <label>Applied Intake</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>AICTE Approval the Current Year</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Accreditation status</label>
+          <input type="text" class="form-control">    
+          </td>
+       </tr>
+       
+             
+     
+        
+     
+   
+</table>
+<table class="table table-bordered" id="hotel_manage_table" hidden>
+    <tr>
+        <td class="text-center my-2" colspan="3"><strong>Course 1</strong></td>
+      </tr>
+      <tr>
+          <td><label>select shift</label>
+              <select name="" id="" class="form-select">
+                  <option value="">First
+  
+                  </option>
+                  <option>
+                  Second
+                  </option>
+              </select>
+          </td>
+          <td><label>Full Time/Part Time</label>
+              <select name="" id="" class="form-select">
+                  <option value="">Full Time
+  
+                  </option>
+                  <option>
+                  Part Time
+                  </option>
+              </select>
+          </td>
+          <td>
+          <label>
+              Year of Starting
+          </label>
+          <input type="text" class="form-control">
+          </td>   
+          </tr>  
+          <tr>  
+          <td>
+              <label>Course Duration</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Current Intake </label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Number of Students Admitted</label>
+          <input type="text" class="form-control">    
+          </td>
+       </tr>
+       <tr>  
+          <td>
+              <label>Applied Intake</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>AICTE Approval the Current Year</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Accreditation status</label>
+          <input type="text" class="form-control">    
+          </td>
+       </tr>
+       <tr>
+          <td class="text-center my-2" colspan="3"><strong>Course 2</strong></td>
+        </tr>
+        <tr>
+            <td><label>select shift</label>
+                <select name="" id="" class="form-select">
+                    <option value="">First
+    
+                    </option>
+                    <option>
+                    Second
+                    </option>
+                </select>
+            </td>
+            <td><label>Full Time/Part Time</label>
+                <select name="" id="" class="form-select">
+                    <option value="">Full Time
+    
+                    </option>
+                    <option>
+                    Part Time
+                    </option>
+                </select>
+            </td>
+            <td>
+            <label>
+                Year of Starting
+            </label>
+            <input type="text" class="form-control">
+            </td>   
+            </tr>  
+            <tr>  
+            <td>
+                <label>Course Duration</label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>Current Intake </label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>Number of Students Admitted</label>
+            <input type="text" class="form-control">    
+            </td>
+         </tr>
+         <tr>  
+            <td>
+                <label>Applied Intake</label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>AICTE Approval the Current Year</label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>Accreditation status</label>
+            <input type="text" class="form-control">    
+            </td>
+         </tr>
+         <tr>
+          <td class="text-center my-2" colspan="3"><strong>Course 3</strong></td>
+        </tr>
+        <tr>
+            <td><label>select shift</label>
+                <select name="" id="" class="form-select">
+                    <option value="">First
+    
+                    </option>
+                    <option>
+                    Second
+                    </option>
+                </select>
+            </td>
+            <td><label>Full Time/Part Time</label>
+                <select name="" id="" class="form-select">
+                    <option value="">Full Time
+    
+                    </option>
+                    <option>
+                    Part Time
+                    </option>
+                </select>
+            </td>
+            <td>
+            <label>
+                Year of Starting
+            </label>
+            <input type="text" class="form-control">
+            </td>   
+            </tr>  
+            <tr>  
+            <td>
+                <label>Course Duration</label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>Current Intake </label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>Number of Students Admitted</label>
+            <input type="text" class="form-control">    
+            </td>
+         </tr>
+         <tr>  
+            <td>
+                <label>Applied Intake</label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>AICTE Approval the Current Year</label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>Accreditation status</label>
+            <input type="text" class="form-control">    
+            </td>
+         </tr>
+         <tr>
+          <td class="text-center my-2" colspan="3"><strong>Course 4</strong></td>
+        </tr>
+        <tr>
+            <td><label>select shift</label>
+                <select name="" id="" class="form-select">
+                    <option value="">First
+    
+                    </option>
+                    <option>
+                    Second
+                    </option>
+                </select>
+            </td>
+            <td><label>Full Time/Part Time</label>
+                <select name="" id="" class="form-select">
+                    <option value="">Full Time
+    
+                    </option>
+                    <option>
+                    Part Time
+                    </option>
+                </select>
+            </td>
+            <td>
+            <label>
+                Year of Starting
+            </label>
+            <input type="text" class="form-control">
+            </td>   
+            </tr>  
+            <tr>  
+            <td>
+                <label>Course Duration</label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>Current Intake </label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>Number of Students Admitted</label>
+            <input type="text" class="form-control">    
+            </td>
+         </tr>
+         <tr>  
+            <td>
+                <label>Applied Intake</label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>AICTE Approval the Current Year</label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>Accreditation status</label>
+            <input type="text" class="form-control">    
+            </td>
+         </tr>
+         <tr>
+          <td class="text-center my-2" colspan="3"><strong>Course 6</strong></td>
+        </tr>
+        <tr>
+            <td><label>select shift</label>
+                <select name="" id="" class="form-select">
+                    <option value="">First
+    
+                    </option>
+                    <option>
+                    Second
+                    </option>
+                </select>
+            </td>
+            <td><label>Full Time/Part Time</label>
+                <select name="" id="" class="form-select">
+                    <option value="">Full Time
+    
+                    </option>
+                    <option>
+                    Part Time
+                    </option>
+                </select>
+            </td>
+            <td>
+            <label>
+                Year of Starting
+            </label>
+            <input type="text" class="form-control">
+            </td>   
+            </tr>  
+            <tr>  
+            <td>
+                <label>Course Duration</label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>Current Intake </label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>Number of Students Admitted</label>
+            <input type="text" class="form-control">    
+            </td>
+         </tr>
+         <tr>  
+            <td>
+                <label>Applied Intake</label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>AICTE Approval the Current Year</label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>Accreditation status</label>
+            <input type="text" class="form-control">    
+            </td>
+         </tr>
+         <tr>
+          <td class="text-center my-2" colspan="3"><strong>Course 8</strong></td>
+        </tr>
+        <tr>
+            <td><label>select shift</label>
+                <select name="" id="" class="form-select">
+                    <option value="">First
+    
+                    </option>
+                    <option>
+                    Second
+                    </option>
+                </select>
+            </td>
+            <td><label>Full Time/Part Time</label>
+                <select name="" id="" class="form-select">
+                    <option value="">Full Time
+    
+                    </option>
+                    <option>
+                    Part Time
+                    </option>
+                </select>
+            </td>
+            <td>
+            <label>
+                Year of Starting
+            </label>
+            <input type="text" class="form-control">
+            </td>   
+            </tr>  
+            <tr>  
+            <td>
+                <label>Course Duration</label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>Current Intake </label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>Number of Students Admitted</label>
+            <input type="text" class="form-control">    
+            </td>
+         </tr>
+         <tr>  
+            <td>
+                <label>Applied Intake</label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>AICTE Approval the Current Year</label>
+            <input type="text" class="form-control">    
+            </td>
+            <td>
+                <label>Accreditation status</label>
+            <input type="text" class="form-control">    
+            </td>
+         </tr> 
+
+</table>
+<table class="table table-bordered" id="pharm_table" hidden>
+    <tr>
+        <td class="text-center my-2" colspan="3"><strong>Course 1</strong></td>
+      </tr>
+      <tr>
+          <td><label>select shift</label>
+              <select name="" id="" class="form-select">
+                  <option value="">First
+  
+                  </option>
+                  <option>
+                  Second
+                  </option>
+              </select>
+          </td>
+          <td><label>Full Time/Part Time</label>
+              <select name="" id="" class="form-select">
+                  <option value="">Full Time
+  
+                  </option>
+                  <option>
+                  Part Time
+                  </option>
+              </select>
+          </td>
+          <td>
+          <label>
+              Year of Starting
+          </label>
+          <input type="text" class="form-control">
+          </td>   
+          </tr>  
+          <tr>  
+          <td>
+              <label>Course Duration</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Current Intake </label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Number of Students Admitted</label>
+          <input type="text" class="form-control">    
+          </td>
+       </tr>
+       <tr>  
+          <td>
+              <label>Applied Intake</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>AICTE Approval the Current Year</label>
+          <input type="text" class="form-control">    
+          </td>
+          <td>
+              <label>Accreditation status</label>
+          <input type="text" class="form-control">    
+          </td>
+       </tr>
+       <tr>
+        <tr>
+            <td class="text-center my-2" colspan="3"><strong>Course 2</strong></td>
+          </tr>
+          <tr>
+              <td><label>select shift</label>
+                  <select name="" id="" class="form-select">
+                      <option value="">First
+      
+                      </option>
+                      <option>
+                      Second
+                      </option>
+                  </select>
+              </td>
+              <td><label>Full Time/Part Time</label>
+                  <select name="" id="" class="form-select">
+                      <option value="">Full Time
+      
+                      </option>
+                      <option>
+                      Part Time
+                      </option>
+                  </select>
+              </td>
+              <td>
+              <label>
+                  Year of Starting
+              </label>
+              <input type="text" class="form-control">
+              </td>   
+              </tr>  
+              <tr>  
+              <td>
+                  <label>Course Duration</label>
+              <input type="text" class="form-control">    
+              </td>
+              <td>
+                  <label>Current Intake </label>
+              <input type="text" class="form-control">    
+              </td>
+              <td>
+                  <label>Number of Students Admitted</label>
+              <input type="text" class="form-control">    
+              </td>
+           </tr>
+           <tr>  
+              <td>
+                  <label>Applied Intake</label>
+              <input type="text" class="form-control">    
+              </td>
+              <td>
+                  <label>AICTE Approval the Current Year</label>
+              <input type="text" class="form-control">    
+              </td>
+              <td>
+                  <label>Accreditation status</label>
+              <input type="text" class="form-control">    
+              </td>
+           </tr>
+           <tr>
+
+</table>
+
+
+    <div class="text-center">
+   <button type="submit" class="btn btn-info my-2" id="SubBtn" hidden>Submit</button>
+
+    </div>
+
+
+</form>
+
+</div>    
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    
+  </script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="crossorigin="anonymous">
+ 
+
+</script>
+<script type="module">
+  import * as func from"./validation.js"
+  $(document).ready(function(){
+    var prog_flg=0;
+    $("#prog_sel").change(function(){
+        alert("Ss");
+       if(this.value=="engg"){
+       
+        document.getElementById("Engg_table").hidden=false;
+        document.getElementById("hotel_manage_table").hidden=true;
+        document.getElementById("pharm_table").hidden=true
+        document.getElementById("SubBtn").hidden=false
+
+       } 
+       else if(this.value=="hotel_manage"){
+
+        document.getElementById("Engg_table").hidden=true;
+        document.getElementById("hotel_manage_table").hidden=false;
+        ocument.getElementById("pharm_table").hidden=true
+        document.getElementById("SubBtn").hidden=false
+
+       }
+       else if(this.value=="pharm"){
+        document.getElementById("Engg_table").hidden=true;
+        document.getElementById("hotel_manage_table").hidden=true;
+        document.getElementById("pharm_table").hidden=false
+        document.getElementById("SubBtn").hidden=false
+
+
+       }else{
+        document.getElementById("Engg_table").hidden=true;
+        document.getElementById("hotel_manage_table").hidden=true;
+        document.getElementById("pharm_table").hidden=true
+        document.getElementById("SubBtn").hidden=true
+
+       }
+
+
+       
+    })
+    
+    $("#SubBtn").click(function(e){
+      //var InstiName =document.getElementById("InstiName").className;
+      var Area =document.getElementById("Area").value;
+
+      var Survey =document.getElementById("Survey").value;
+      var AuthorityName =document.getElementById("AuthorityName").value;
+
+        if(func.ValidInput("id","InstiName")&&func.ValidInput("id","AuthorityName")&&func.CheckNull(Area)&&func.CheckNull(Survey)){
+           alert("jj")
+           
+        }
+        else{
+         
+          e.preventDefault()
+        }
+        
+});
+    
+    
+});
+</script>
+
+  
+</body>
+</html>
