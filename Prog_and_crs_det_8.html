@@ -946,7 +946,7 @@
   $(document).ready(function(){
     var prog_flg=0;
     $("#prog_sel").change(function(){
-        alert("Ss");
+       
        if(this.value=="engg"){
        
         document.getElementById("Engg_table").hidden=false;
@@ -983,24 +983,28 @@
     })
     
     $("#SubBtn").click(function(e){
-      //var InstiName =document.getElementById("InstiName").className;
-      var Area =document.getElementById("Area").value;
-
-      var Survey =document.getElementById("Survey").value;
-      var AuthorityName =document.getElementById("AuthorityName").value;
-
-        if(func.ValidInput("id","InstiName")&&func.ValidInput("id","AuthorityName")&&func.CheckNull(Area)&&func.CheckNull(Survey)){
-           alert("jj")
-           
+      var tableName=document.getElementById("pharm_table");
+      var inputTags=tableName.getElementsByTagName("input")
+      var i;
+      var cnt=0;
+      var ln=inputTags.length;
+      for(i=0;i<ln;i++){
+        if(!inputTags[i].value==""){
+          cnt++;
         }
-        else{
-         
-          e.preventDefault()
-        }
-        
-});
-    
-    
+      }
+   if(cnt==ln){
+   alert(
+    "ok"
+   )
+   }
+   else{
+    e.preventDefault()
+    alert("fill");
+   }
+   alert(cnt)
+   alert(ln)
+    })   
 });
 </script>
 
