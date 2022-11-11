@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>HOSTEL FACILITIES </title>
+</head>
+<body>
+    
+<div class="container text-center my-1 ">
+<div class="" role="alert" id="alertBox">
+  <strong><p id="alert-msg"></p></strong>
+</div>
+
+</div>
+<div class="text-center inline">
+  <img src="./dbatu.jpg" class="rounded" alt="...">
+</div>
+<div class="container  19  card " style="margin-top:20px;">
+<div class="text-center">
+    <h2>HOSTEL FACILITIES  </h2>
+</div>
+<form name="myform" class="form-group" action="#" id="InstiTuteDetForm">
+    <div class="row bg-light text-dark" id="BasicDetails" >
+    <div class="col-md-6 text-center">
+        <label for="inputname">Category</label>
+        <label class="requiredField" style="color:red;"> *</label>
+        <select name="" id="" class="form-select">
+<option value="BOYS">BOYS</option>
+<option value="Girls">Girls</option>
+
+        </select>
+
+    </div>
+    <div class="col-md-6">
+        <label for="Level" >Building Name</label>
+        <label class="requiredField" style="color:red;"> *</label>
+        
+        <input type="text" class="form-control" placeholder="Building Name"  name="Name of the Laboratory" id="District">
+
+
+    </div>
+    <div class="col-md-4 ">
+        <label for="Level" >Number of rooms having </label>
+        <label class="requiredField" style="color:red;"> *</label>
+        
+        <input type="text" class="form-control" placeholder="Number of rooms having"  name="Volumes" id="District">
+
+
+    </div>
+  
+      
+        <div class="col-md-4 ">
+            <label for="Level" >Area (in Sqm)
+            </label>
+            <label class="requiredField" style="color:red;"> *</label>
+            
+            <input type="text" class="form-control" placeholder="Area (in Sqm) " name="Volumes" id="District">
+    
+    
+        
+    </div>
+    <div class="col-md-4 ">
+        <label for="Level" >Total no of students in the Hostel </label>
+        <label class="requiredField" style="color:red;"> *</label>
+        
+        <input type="text" class="form-control" placeholder="Total no of students in the Hostel" name="Volumes" id="District">
+
+
+    
+</div>
+<div class="col-md-4 ">
+    <label for="Level" >Reservation Room</label>
+    <label class="requiredField" style="color:red;"> *</label>
+    
+<select name="" id="" class="form-select">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+
+</select>
+
+
+</div>
+<div class="col-md-4 ">
+    <label for="Level" >Backup Supply </label>
+    <label class="requiredField" style="color:red;"> *</label>
+    
+<select name="" id="" class="form-select">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+
+</select>
+
+
+</div>
+<div class="col-md-4 ">
+    <label for="Level" >Library Facility</label>
+    <label class="requiredField" style="color:red;"> *</label>
+    
+<select name="" id="" class="form-select">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+
+</select>
+
+
+</div>
+<div class="col-md-4 ">
+    <label for="Level" >Internet Facility</label>
+    <label class="requiredField" style="color:red;"> *</label>
+    
+<select name="" id="" class="form-select">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+
+</select>
+
+
+
+</div>
+
+
+
+
+
+
+    
+    
+   
+    
+    
+    
+ 
+    
+ 
+   
+
+   
+
+
+    
+   
+    
+        <div class="text-center">
+   <button type="Submit" class="btn btn-info my-2" id="SubBtn" >Submit</button>
+ 
+    </div>
+
+
+</form>
+
+</div>    
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    
+  </script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="crossorigin="anonymous">
+ 
+
+</script>
+<script type="module">
+  import * as func from"./validation.js"
+  $(document).ready(function(){
+
+    $("#NxtBtn").click(function(){
+     
+    
+    var InstiName=document.getElementById("InstiName").value;
+    var PinCode=document.getElementById("PinCode").value;
+    var MobNo=document.getElementById("MobNo").value;
+    var LandLine=document.getElementById("LandLine").value;
+    var PanNo=document.getElementById("PanNo").value
+   
+
+// if(func.ValidString(InstiName)&&func.ValidPin(PinCode)&&func.ValidMobNo(MobNo)&&func.ValidPanNo(PanNo)){
+  if(func.ValidString(InstiName)&&func.ValidPin(PinCode)&&func.ValidMobNo(MobNo)&&func.ValidPanNo(PanNo)&&func.ValidLandLine(LandLine)){
+  document.getElementById("BasicDetails").hidden=true;
+      document.getElementById("FileUpload").hidden=false;
+      document.getElementById("NxtBtn").hidden=true;
+      document.getElementById("PrevBtn").hidden=false;
+      document.getElementById("SubBtn").hidden=false;
+ }
+
+  });
+
+  
+    $("#PrevBtn").click(function(){
+     
+     document.getElementById("BasicDetails").hidden=false;
+     document.getElementById("FileUpload").hidden=true;
+     document.getElementById("NxtBtn").hidden=false;
+     document.getElementById("PrevBtn").hidden=true;
+     document.getElementById("SubBtn").hidden=true;
+   })
+  
+
+  $("#SubBtn").click(function(e){
+   
+   
+    var InstiName=document.getElementById("InstiName").value;
+    var PinCode=document.getElementById("PinCode").value;
+    var MobNo=document.getElementById("MobNo").value;
+    var MobNo=document.getElementById("MobNo").value;
+    var MobNo=document.getElementById("MobNo").value;
+   
+
+ if(func.ValidMobNo(MobNo)){
+  alert("validate");
+ }else{
+  e.preventDefault();
+ }
+  });
+});
+</script>
+
+  
+</body>
+</html>
